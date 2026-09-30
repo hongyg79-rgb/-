@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 안전점검 보고서 검색</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">2026 안전점검 보고서(가상)</p>
+      <h1>안전점검 보고서 검색·열람</h1>
+      <p class="description">
+        부서 직원이 보고서 각 장의 제목과 본문을 검색하고 열람할 수 있는 정적 웹페이지입니다.
+      </p>
+
+      <div class="search-panel" role="search">
+        <label for="searchInput" class="search-label">검색어</label>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="제목 또는 본문 키워드를 입력하세요"
+          autocomplete="off"
+        >
+        <button type="button" id="clearButton">초기화</button>
+      </div>
+
+      <div class="result-info" aria-live="polite">
+        결과 <strong id="resultCount">0</strong>건
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="cardContainer" class="card-grid" aria-label="보고서 장 목록">
+      <!-- app.js에서 카드 생성 -->
+    </section>
+
+    <p id="emptyMessage" class="empty-message" hidden>
+      검색어와 일치하는 제목 또는 본문이 없습니다.
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
